@@ -3,6 +3,12 @@
   --color_header-text: rgb(255,255,255);
 }
 
+.custom-card:hover{
+  box-shadow: 0px 2px 3px 3px #e6e6e6;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+
 .custom-card .card-header{
   background-color: var(--gray-dark);
   color: var(--color_header-text);
