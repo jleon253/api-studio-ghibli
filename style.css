@@ -1,0 +1,9 @@
+:root{
+  --bkg_header-card: rgb(64, 95, 181);
+  --color_header-text: rgb(255,255,255);
+}
+
+.custom-card .card-header{
+  background-color: var(--gray-dark);
+  color: var(--color_header-text);
+}
