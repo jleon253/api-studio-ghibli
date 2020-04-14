@@ -30,8 +30,15 @@ function crearLogo() {
   const logo = document.createElement("img");
   logo.setAttribute('class','d-block mx-auto img-fluid');
   logo.src = 'logo.png';
+
+  const link = document.createElement('a');
+  link.setAttribute('href','https://www.studioghibli.com.au/');
+  link.setAttribute('class','btn btn-outline-dark btn-sm d-table mx-auto my-4');
+  link.setAttribute('target','_blank');
+  link.textContent = 'Go to Studio Ghibli Official Page';
   
   columnaLogo.appendChild(logo);
+  columnaLogo.appendChild(link);
   filaLogo.appendChild(columnaLogo);
   
   return filaLogo;
@@ -40,20 +47,19 @@ function crearLogo() {
 function crearCardPelicula(titulo, descripcion, footer) {
   const card = document.createElement('div');
   card.setAttribute('class','card custom-card');
-  const cardHeader = document.createElement('div');
-  cardHeader.setAttribute('class','card-header');
+  const img = document.createElement('img');
+  img.setAttribute('src',`/img/${titulo}.jpg`);
+  img.setAttribute('class','card-img-top img-thumbnail img-fluid');
   const cardBody = document.createElement('div');
   cardBody.setAttribute('class','card-body');
   const cardText = document.createElement('p');
   cardText.setAttribute('class','card-text');
   const cardFooter = document.createElement('div');
   cardFooter.setAttribute('class','card-footer text-muted');
-
-  cardHeader.textContent = titulo;
   cardText.textContent = descripcion;
   cardFooter.textContent = `Director: ${footer}`;
 
-  card.appendChild(cardHeader);
+  card.appendChild(img);
   cardBody.appendChild(cardText);
   card.appendChild(cardBody);
   card.appendChild(cardFooter);
@@ -73,9 +79,9 @@ function consumirApi() {
     var data = JSON.parse( this.response );
 
     if (request.status >= 200 && request.status < 400) {
-      console.log(data);
+      // console.log(data);
       data.forEach(pelicula => {
-        console.log(pelicula);
+        // console.log(pelicula);
         pelicula.description = pelicula.description.substring(0,300);
         cardColumns.appendChild(crearCardPelicula(pelicula.title , `${pelicula.description}...`, pelicula.director));
       });
