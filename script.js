@@ -48,7 +48,7 @@ function crearCardPelicula(titulo, descripcion, footer) {
   const card = document.createElement('div');
   card.setAttribute('class','card custom-card');
   const img = document.createElement('img');
-  img.setAttribute('src',`/img/${titulo}.jpg`);
+  img.setAttribute('src',`./img/${titulo}.jpg`);
   img.setAttribute('class','card-img-top img-thumbnail img-fluid');
   const cardBody = document.createElement('div');
   cardBody.setAttribute('class','card-body');
