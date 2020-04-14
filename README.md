@@ -1,6 +1,8 @@
 # Api-studio-ghibli
-Web app para conectar con el API de Studio Ghibli y mostrar todas sus peliculas.
+Web app that allows connect with the Studio Ghibli API and show their movies.
 
-Code: JavaScript
+> Made with: HTML, CSS and Vanilla JavaScript
+
   
-API: https://ghibliapi.herokuapp.com/
+1. API: https://ghibliapi.herokuapp.com/
+2. Demo: https://jleon253.github.io/api-studio-ghibli/
